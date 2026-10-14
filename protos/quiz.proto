@@ -1,0 +1,68 @@
+syntax = "proto3";
+
+package quiz;
+
+service QuizService {
+  rpc ListQuestions (ListQuestionsRequest) returns (ListQuestionsResponse);
+  rpc SubmitAnswers (SubmitRequest) returns (SubmitResponse);
+  rpc GetProgress (ProgressRequest) returns (UserProgress);
+  rpc ResetProgress (ProgressRequest) returns (UserProgress);
+}
+
+message ListQuestionsRequest {
+  string difficulty = 1;
+  int32 limit = 2;
+}
+
+message ListQuestionsResponse {
+  repeated Question questions = 1;
+}
+
+message Question {
+  string id = 1;
+  string text_es = 2;
+  repeated string options_es = 3;
+  int32 correct_index = 4;
+  string explanation_es = 5;
+  string difficulty = 6;
+  string category = 7;
+}
+
+message Answer {
+  string question_id = 1;
+  int32 selected_index = 2;
+}
+
+message SubmitRequest {
+  string user_id = 1;
+  repeated Answer answers = 2;
+}
+
+message SubmitResponse {
+  int32 total = 1;
+  int32 correct = 2;
+  double score = 3;
+  repeated AnswerFeedback feedback = 4;
+  UserProgress progress = 5;
+}
+
+message AnswerFeedback {
+  string question_id = 1;
+  bool is_correct = 2;
+  int32 correct_index = 3;
+  string explanation_es = 4;
+}
+
+message ProgressRequest {
+  string user_id = 1;
+}
+
+message UserProgress {
+  string user_id = 1;
+  int32 attempts = 2;
+  int32 best_score = 3;
+  double best_percent = 4;
+  int32 total_answered = 5;
+  int32 total_correct = 6;
+  string level_es = 7;
+}

@@ -1,0 +1,10 @@
+{
+  "explorador1": {
+    "attempts": 14,
+    "best_score": 1,
+    "best_percent": 10.0,
+    "total_answered": 140,
+    "total_correct": 2,
+    "level_es": "Principiante"
+  }
+}

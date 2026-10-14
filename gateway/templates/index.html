@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Astro</title>
+<link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+<header class="header">
+<div class="brand">
+<span class="logo">🪐</span>
+<div>
+<h1>Astro</h1>
+</div>
+</div>
+<nav class="tabs">
+<button data-tab="catalog" class="active">Catálogo</button>
+<button data-tab="compare">Comparador</button>
+<button data-tab="simulator">Simulador</button>
+<button data-tab="quiz">Cuestionario</button>
+<button data-tab="favorites">Favoritos y progreso</button>
+</nav>
+</header>
+<main>
+<section id="tab-catalog" class="panel active">
+<div class="filters">
+<input id="searchInput" type="text" placeholder="Buscar objeto...">
+<select id="typeFilter">
+<option value="">Todos los tipos</option>
+<option value="PLANET">Planetas</option>
+<option value="STAR">Estrellas</option>
+<option value="GALAXY">Galaxias</option>
+<option value="PHENOMENON">Fenómenos</option>
+</select>
+<label class="check"><input id="habitableOnly" type="checkbox"> Solo habitables</label>
+<button id="searchButton">Buscar</button>
+</div>
+<div id="catalogGrid" class="grid"></div>
+<div id="detailBox" class="detail hidden"></div>
+</section>
+<section id="tab-compare" class="panel">
+<h2>Comparador de planetas</h2>
+<div class="row">
+<select id="planetA"></select>
+<select id="planetB"></select>
+<button id="compareButton">Comparar</button>
+</div>
+<div id="compareResult" class="compare"></div>
+</section>
+<section id="tab-simulator" class="panel">
+<h2>Simulador de misiones espaciales</h2>
+<div class="form">
+<label>Origen
+<select id="originSelect"></select>
+</label>
+<label>Destino
+<select id="destinationSelect"></select>
+</label>
+<label>Nave
+<select id="spacecraftSelect"></select>
+</label>
+<label>Velocidad (km/s)
+<input id="speedInput" type="number" value="20" min="1" max="300">
+</label>
+<label>Carga (kg)
+<input id="payloadInput" type="number" value="1000" min="0" max="100000">
+</label>
+<label>Tripulación
+<input id="crewInput" type="number" value="2" min="0" max="20">
+</label>
+<button id="simulateButton">Simular misión</button>
+</div>
+<div id="missionResult" class="mission"></div>
+</section>
+<section id="tab-quiz" class="panel">
+<h2>Cuestionarios de astronomía</h2>
+<div class="row">
+<input id="userInput" type="text" value="explorador1" placeholder="Nombre de usuario">
+<select id="difficultyFilter">
+<option value="">Todas</option>
+<option value="easy">Fácil</option>
+<option value="medium">Media</option>
+<option value="hard">Difícil</option>
+</select>
+<button id="loadQuizButton">Cargar preguntas</button>
+<button id="submitQuizButton">Enviar respuestas</button>
+</div>
+<div id="quizBox" class="quiz"></div>
+<div id="quizResult" class="mission"></div>
+</section>
+<section id="tab-favorites" class="panel">
+<h2>Favoritos y progreso</h2>
+<div class="row">
+<button id="refreshFavoritesButton">Actualizar favoritos</button>
+<button id="refreshProgressButton">Ver mi progreso</button>
+<button id="resetProgressButton">Reiniciar progreso</button>
+</div>
+<div id="favoritesGrid" class="grid"></div>
+<div id="progressBox" class="mission"></div>
+</section>
+</main>
+<footer>
+<span>Catálogo · Simulación · Cuestionarios via gRPC : 50051 · 50052 · 50053</span>
+</footer>
+<script src="/static/app.js"></script>
+</body>
+</html>

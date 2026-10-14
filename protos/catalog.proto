@@ -1,0 +1,71 @@
+syntax = "proto3";
+
+package catalog;
+
+service CatalogService {
+  rpc ListObjects (ListRequest) returns (ListResponse);
+  rpc GetObject (GetRequest) returns (CelestialObject);
+  rpc ComparePlanets (CompareRequest) returns (CompareResponse);
+  rpc ToggleFavorite (FavoriteRequest) returns (FavoriteResponse);
+  rpc ListFavorites (Empty) returns (ListResponse);
+}
+
+message Empty {
+}
+
+message ListRequest {
+  string type_filter = 1;
+  string search = 2;
+  bool habitable_only = 3;
+}
+
+message ListResponse {
+  repeated CelestialObject objects = 1;
+}
+
+message GetRequest {
+  string id = 1;
+}
+
+message CelestialObject {
+  string id = 1;
+  string type = 2;
+  string name = 3;
+  string description_es = 4;
+  double distance_ly = 5;
+  double mass_kg = 6;
+  double diameter_km = 7;
+  double gravity_ms2 = 8;
+  double orbital_period_days = 9;
+  double mean_temp_c = 10;
+  bool habitable = 11;
+  string image_url = 12;
+}
+
+message CompareRequest {
+  string planet_a_id = 1;
+  string planet_b_id = 2;
+}
+
+message CompareResponse {
+  CelestialObject planet_a = 1;
+  CelestialObject planet_b = 2;
+  repeated MetricDiff diffs = 3;
+}
+
+message MetricDiff {
+  string metric = 1;
+  double value_a = 2;
+  double value_b = 3;
+  string winner_id = 4;
+  double ratio = 5;
+}
+
+message FavoriteRequest {
+  string id = 1;
+}
+
+message FavoriteResponse {
+  string id = 1;
+  bool is_favorite = 2;
+}

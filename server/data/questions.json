@@ -1,0 +1,92 @@
+[
+  {
+    "id": "q1",
+    "text_es": "¿Cuál es el planeta más grande del sistema solar?",
+    "options_es": ["Saturno", "Júpiter", "Neptuno", "Tierra"],
+    "correct_index": 1,
+    "explanation_es": "Júpiter tiene un diámetro de 139.820 km, el mayor de todos los planetas.",
+    "difficulty": "easy",
+    "category": "planetas"
+  },
+  {
+    "id": "q2",
+    "text_es": "¿Qué estrella es la más cercana a la Tierra?",
+    "options_es": ["Próxima Centauri", "Sirio", "El Sol", "Betelgeuse"],
+    "correct_index": 2,
+    "explanation_es": "El Sol es nuestra estrella a solo 8 minutos luz de distancia.",
+    "difficulty": "easy",
+    "category": "estrellas"
+  },
+  {
+    "id": "q3",
+    "text_es": "¿Cuánto dura un año en Marte aproximadamente?",
+    "options_es": ["365 días", "224 días", "687 días", "88 días"],
+    "correct_index": 2,
+    "explanation_es": "Marte tarda 687 días terrestres en orbitar el Sol.",
+    "difficulty": "easy",
+    "category": "planetas"
+  },
+  {
+    "id": "q4",
+    "text_es": "¿Qué fenómeno es Sagitario A*?",
+    "options_es": ["Una nebulosa", "Un agujero negro supermasivo", "Una supernova", "Un cúmulo globular"],
+    "correct_index": 1,
+    "explanation_es": "Sagitario A* es el agujero negro supermasivo del centro galáctico.",
+    "difficulty": "medium",
+    "category": "fenomenos"
+  },
+  {
+    "id": "q5",
+    "text_es": "¿Qué planeta tiene los anillos más visibles?",
+    "options_es": ["Júpiter", "Urano", "Saturno", "Neptuno"],
+    "correct_index": 2,
+    "explanation_es": "Saturno posee el sistema de anillos más brillante y extenso.",
+    "difficulty": "easy",
+    "category": "planetas"
+  },
+  {
+    "id": "q6",
+    "text_es": "¿A qué distancia está la galaxia de Andrómeda?",
+    "options_es": ["2.5 millones de años luz", "4.24 años luz", "26.000 años luz", "13.800 millones de años luz"],
+    "correct_index": 0,
+    "explanation_es": "Andrómeda está a unos 2.5 millones de años luz.",
+    "difficulty": "medium",
+    "category": "galaxias"
+  },
+  {
+    "id": "q7",
+    "text_es": "¿Cuál es la gravedad aproximada en la Tierra?",
+    "options_es": ["3.7 m/s²", "8.87 m/s²", "9.81 m/s²", "24.79 m/s²"],
+    "correct_index": 2,
+    "explanation_es": "La gravedad terrestre estándar es 9.81 m/s².",
+    "difficulty": "medium",
+    "category": "fisica"
+  },
+  {
+    "id": "q8",
+    "text_es": "¿Qué planeta tiene una temperatura media de 464 °C?",
+    "options_es": ["Mercurio", "Venus", "Marte", "Júpiter"],
+    "correct_index": 1,
+    "explanation_es": "Venus sufre un efecto invernadero descontrolado que eleva su temperatura a 464 °C.",
+    "difficulty": "hard",
+    "category": "planetas"
+  },
+  {
+    "id": "q9",
+    "text_es": "¿Qué tipo de estrella es Próxima Centauri?",
+    "options_es": ["Enana amarilla", "Gigante roja", "Enana roja", "Supergigante azul"],
+    "correct_index": 2,
+    "explanation_es": "Próxima Centauri es una enana roja de tipo espectral M.",
+    "difficulty": "hard",
+    "category": "estrellas"
+  },
+  {
+    "id": "q10",
+    "text_es": "¿Qué planeta rota de lado?",
+    "options_es": ["Urano", "Saturno", "Marte", "Venus"],
+    "correct_index": 0,
+    "explanation_es": "Urano tiene una inclinación axial de 98 grados y rota prácticamente de lado.",
+    "difficulty": "hard",
+    "category": "planetas"
+  }
+]

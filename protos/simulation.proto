@@ -1,0 +1,44 @@
+syntax = "proto3";
+
+package simulation;
+
+service SimulationService {
+  rpc SimulateMission (MissionRequest) returns (MissionResult);
+  rpc ListPresets (Empty) returns (PresetList);
+}
+
+message Empty {
+}
+
+message MissionRequest {
+  string origin_id = 1;
+  string destination_id = 2;
+  string spacecraft = 3;
+  double speed_kms = 4;
+  double payload_kg = 5;
+  int32 crew_size = 6;
+}
+
+message MissionStage {
+  string name_es = 1;
+  double duration_days = 2;
+  double fuel_tons = 3;
+  string status = 4;
+}
+
+message MissionResult {
+  string origin_id = 1;
+  string destination_id = 2;
+  double distance_km = 3;
+  double travel_days = 4;
+  double travel_years = 5;
+  double fuel_tons = 6;
+  double success_rate = 7;
+  string difficulty_es = 8;
+  repeated MissionStage stages = 9;
+  string summary_es = 10;
+}
+
+message PresetList {
+  repeated string spacecrafts = 1;
+}
